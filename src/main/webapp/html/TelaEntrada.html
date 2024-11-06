@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de Arquivo JS</title>
+    <link rel="stylesheet" href="../css/GeneralStyles.css">
+    <link rel="stylesheet" href="../css/EntradaStyles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formulário à Esquerda -->
+        <div class="form-container">
+            <h1>Leitor de Arquivo JS</h1>
+            <form id="fileForm">
+                <label for="filePath">Caminho para o arquivo JS:</label>
+                <input type="text" id="filePath" name="filePath" placeholder="Digite o caminho do arquivo JS">
+                <button id="submit">Enviar</button>
+
+            </form>
+            <div id="message" class="error"></div>
+        </div>
+
+        <!-- Tabela à Direita -->
+        <div class="table-container">
+            <h1>Jogos Processados</h1>
+            <table id="gamesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Data de Lançamento</th>
+                        <th>Preço</th>
+                        <th>Desenvolvedores</th>
+                        <th>Gêneros</th>
+                    </tr>
+                </thead>
+                <tbody id="gamesBody">
+                    <!-- Dados serão inseridos dinamicamente aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/EntradaScript.js"></script>
+</body>
+</html>

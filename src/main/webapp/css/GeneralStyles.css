@@ -1,0 +1,83 @@
+/* Paleta de cores da Steam */
+:root {
+    --steam-dark: #171a1d;
+    --steam-light: #3a3f44;
+    --steam-accent: #00b8d4;
+    --steam-text-light: #ffffff;
+    --steam-text-dark: #d1d3d8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--steam-dark);
+    color: var(--steam-text-light);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+.table-container {
+    width: 65%;
+    background-color: var(--steam-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--steam-text-dark);
+    color: var(--steam-text-light);
+}
+
+th {
+    background-color: var(--steam-accent);
+    color: var(--steam-text-light);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #2d343d;
+}
+
+tr:hover {
+    background-color: #4b636e;
+}
+
+#gamesTable {
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 400px; /* Ajusta a altura da tabela */
+}
+
+#gamesBody {
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container,
+    .table-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

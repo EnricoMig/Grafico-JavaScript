@@ -1,0 +1,73 @@
+/* Paleta de cores da Steam */
+:root {
+    --steam-dark: #171a1d;
+    --steam-light: #3a3f44;
+    --steam-accent: #00b8d4;
+    --steam-text-light: #ffffff;
+    --steam-text-dark: #d1d3d8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--steam-dark);
+    color: var(--steam-text-light);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    width: 30%;
+    background-color: var(--steam-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--steam-accent);
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: var(--steam-text-light);
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid var(--steam-text-dark);
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--steam-dark);
+}
+
+button {
+    padding: 10px;
+    background-color: var(--steam-accent);
+    border: none;
+    border-radius: 5px;
+    color: var(--steam-text-light);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0099b3;
+}
