@@ -18,12 +18,25 @@ function adicionarEventoClique() {
 }
 
 async function processarArquivo(filePath) {
-    let response = await fetch(/*Endpoint servlet*/"",{
-        body: x
-    }).then(x => x.json()).then(y =>{
-        y =>{
-            variavel = y;
-    }})
+    try {
+        let response = await fetch("/processamento",{
+            method:'POST',headers:{
+    
+                'content-Type':'application/json'
+            }
+        });
+        
+    
+        if(response.ok){
+            let data = await response.json();
+            console.log(data);
+            variavel = data;
+        } else {
+            console.log('Erro na requisição:'+response.status)
+        }
+    } catch (error) {
+        console.error('Erro ao processar arquivo:', error)
+    }
 }
 
 // Chama a função assim que o DOM estiver carregado

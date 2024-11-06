@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>processamento</servlet-name>
+  	<display-name>processamento</display-name>
+  	<description></description>
+  	<servlet-class>servlet.processamento</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>processamento</servlet-name>
+  	<url-pattern>/processamento</url-pattern>
+  </servlet-mapping>
 </web-app>
